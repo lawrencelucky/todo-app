@@ -16,6 +16,7 @@
   background-color: transparent;
   outline: 0;
   margin-right: 2rem;
+  transition: all 0.5s;
 }
 
 .formInput__input::placeholder {
@@ -24,17 +25,18 @@
 
 .formInput__input:focus {
   border-color: #fffff0;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .formInput .MuiSvgIcon-root {
   font-size: 4rem;
   color: rgba(255, 255, 240, 0.6);
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .formInput .MuiSvgIcon-root:hover,
 .formInput .MuiSvgIcon-root:focus {
   color: #fffff0;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }

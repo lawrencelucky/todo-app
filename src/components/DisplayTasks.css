@@ -15,10 +15,12 @@
   width: 60rem;
   margin-top: 2rem;
   padding: 1rem 2rem;
+  transition: all 0.5s;
 }
 
 .displayTask__task:hover {
   background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
 }
 
 .displayTask__task--label {
@@ -76,7 +78,7 @@
 
 .displayTask__task:hover .MuiSvgIcon-root {
   display: inline;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .displayTask__task .MuiSvgIcon-root:hover,
