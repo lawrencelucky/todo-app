@@ -4,19 +4,30 @@
 }
 
 .displayTask p {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 3rem;
 }
 
 .displayTask__task {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 60rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
 }
 
-.displayTask__task input {
+.displayTask__task:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.displayTask__task--label {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+
+.displayTask__task--label input {
   height: 25px;
   width: 25px;
   -webkit-appearance: none;
@@ -32,33 +43,34 @@
   margin-right: 3rem;
 }
 
-.displayTask__task input:checked {
+.displayTask__task--label input:checked {
   border: 1px solid #fffff0;
   background-color: #744210;
 }
 
 .displayTask__task--text {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  width: 40rem;
 }
 
-.displayTask__task input:checked + .displayTask__task--text::before {
+.displayTask__task--label input:checked + .displayTask__task--text::before {
   content: '\2713';
   display: block;
   text-align: center;
   color: #fffff0;
   position: absolute;
   font-size: 2.3rem;
-  left: 0.5rem;
-  top: 0.3rem;
+  left: 0.3rem;
+  top: 0rem;
 }
 
-.displayTask__task input:active {
+.displayTask__task--label input:active {
   border: 2px solid #744210;
 }
 
 .displayTask__task .MuiSvgIcon-root {
-  font-size: 2rem;
-  color: rgb(128, 128, 128, 0.5);
+  font-size: 2.5rem;
+  color: rgba(244, 67, 54, 0.7);
   display: none;
 }
 
