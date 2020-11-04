@@ -1,0 +1,74 @@
+.displayTask {
+  padding: 0 12rem;
+  margin-top: 4rem;
+}
+
+.displayTask p {
+  font-size: 2.5rem;
+}
+
+.displayTask__task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60rem;
+  margin-top: 3rem;
+}
+
+.displayTask__task input {
+  height: 25px;
+  width: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px solid #fffff0;
+  border-radius: 4px;
+  outline: none;
+  transition-duration: 0.3s;
+  background-color: #fffff0;
+  cursor: pointer;
+  margin-right: 3rem;
+}
+
+.displayTask__task input:checked {
+  border: 1px solid #fffff0;
+  background-color: #744210;
+}
+
+.displayTask__task--text {
+  font-size: 3rem;
+}
+
+.displayTask__task input:checked + .displayTask__task--text::before {
+  content: '\2713';
+  display: block;
+  text-align: center;
+  color: #fffff0;
+  position: absolute;
+  font-size: 2.3rem;
+  left: 0.5rem;
+  top: 0.3rem;
+}
+
+.displayTask__task input:active {
+  border: 2px solid #744210;
+}
+
+.displayTask__task .MuiSvgIcon-root {
+  font-size: 2rem;
+  color: rgb(128, 128, 128, 0.5);
+  display: none;
+}
+
+.displayTask__task:hover .MuiSvgIcon-root {
+  display: inline;
+  transition: all 0.3s;
+}
+
+.displayTask__task .MuiSvgIcon-root:hover,
+.displayTask__task .MuiSvgIcon-root:focus {
+  color: #f44336;
+  cursor: pointer;
+}

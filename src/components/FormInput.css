@@ -1,0 +1,41 @@
+.formInput {
+  padding: 0 12rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.formInput__input {
+  font-family: 'Caveat', cursive;
+  color: #fffff0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 240, 0.6);
+  padding: 1rem;
+  font-size: 2rem;
+  width: 45rem;
+  background-color: transparent;
+  outline: 0;
+  margin-right: 2rem;
+}
+
+.formInput__input::placeholder {
+  color: rgba(255, 255, 240, 0.6);
+}
+
+.formInput__input:focus {
+  border-color: #fffff0;
+  transition: all 0.3s;
+}
+
+.formInput .MuiSvgIcon-root {
+  /* width: 10%; */
+  font-size: 4rem;
+  color: rgba(255, 255, 240, 0.6);
+  cursor: pointer;
+}
+
+.formInput .MuiSvgIcon-root:hover,
+.formInput .MuiSvgIcon-root:focus {
+  color: #fffff0;
+  transition: all 0.3s;
+}
