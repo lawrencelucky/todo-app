@@ -6,7 +6,9 @@ import DisplayTasks from './components/DisplayTasks';
 
 function App() {
   const [task, setTask] = useState('');
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem('tasks')) || []
+  );
 
   return (
     <div className='app'>

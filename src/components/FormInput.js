@@ -4,7 +4,8 @@ import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
 import './FormInput.css';
 
 function FormInput({ task, setTask, tasks }) {
-  const handleSubmit = () => {
+  const handleSubmit = e => {
+    e.preventDefault();
     let id;
     if (tasks.length <= 0) {
       id = tasks.length + 1;
@@ -18,20 +19,33 @@ function FormInput({ task, setTask, tasks }) {
       id,
     };
 
-    tasks.push(taskObject);
-    setTask('');
+    if (taskObject.todo.length) {
+      tasks.push(taskObject);
+      setTask('');
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+    } else {
+      alert(`You shouldn't submit an empty task!`);
+    }
   };
 
   return (
     <div className='formInput'>
-      <input
-        className='formInput__input'
-        placeholder='Write down a task!'
-        autoFocus
-        value={task}
-        onChange={e => setTask(e.target.value)}
-      />
-      <CheckCircleOutlineIcon onClick={handleSubmit} />
+      <form onSubmit={e => handleSubmit(e)}>
+        <input
+          className='formInput__input'
+          placeholder='Write down a task!'
+          autoFocus
+          value={task}
+          onChange={e => setTask(e.target.value)}
+        />
+        <button
+          className='formInput__button'
+          onClick={handleSubmit}
+          type='submit'
+        >
+          <CheckCircleOutlineIcon />
+        </button>
+      </form>
     </div>
   );
 }

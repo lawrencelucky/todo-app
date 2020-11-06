@@ -1,6 +1,9 @@
 .formInput {
   padding: 0 12rem;
   margin-top: 2rem;
+}
+
+.formInput form {
   display: flex;
   align-items: center;
 }
@@ -26,6 +29,15 @@
 .formInput__input:focus {
   border-color: #fffff0;
   transition: all 0.5s;
+}
+
+.formInput__button {
+  background: transparent;
+  border: 0;
+}
+
+.formInput__button:focus {
+  outline: 0;
 }
 
 .formInput .MuiSvgIcon-root {

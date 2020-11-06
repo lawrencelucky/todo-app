@@ -15,11 +15,25 @@ function DisplayTasks({ tasks, setTasks }) {
           : (doneTask.done = false),
     };
     setTasks(newArray);
+    // console.log(newArray);
+    localStorage.setItem('tasks', JSON.stringify(newArray));
+    // console.log();
   };
 
   const handleRemoveTask = removeTask => {
     const newArray = tasks.filter(task => task.id !== removeTask.id);
     setTasks(newArray);
+    localStorage.setItem('tasks', JSON.stringify(newArray));
+  };
+
+  const displayDoneTasks = displayTask => {
+    const lengthOfDoneTask = [];
+    displayTask.forEach(task => {
+      if (task.done) {
+        lengthOfDoneTask.push(task.done);
+      }
+    });
+    return lengthOfDoneTask.length;
   };
 
   return (
@@ -32,14 +46,25 @@ function DisplayTasks({ tasks, setTasks }) {
               }  available`
             : 'There are no available tasks'}
         </p>
-        <p className='dsiplayTask__header--completed'>{`3 of ${tasks.length} completed`}</p>
+        <p className='dsiplayTask__header--completed'>
+          {tasks.length > 0 && tasks.length !== displayDoneTasks(tasks)
+            ? `${displayDoneTasks(tasks)} of ${tasks.length} completed`
+            : ''}
+          {displayDoneTasks(tasks) === tasks.length && tasks.length > 0
+            ? 'All tasks completed'
+            : ''}
+        </p>
       </div>
 
       <div className='displayTask__tasks'>
         {tasks.map((task, i) => (
           <div className='displayTask__task' key={i}>
             <label className='displayTask__task--label'>
-              <input type='checkbox' onClick={() => handleDoneTasks(task)} />
+              <input
+                type='checkbox'
+                checked={task.done}
+                onChange={() => handleDoneTasks(task)}
+              />
               <span
                 className={`displayTask__task--text ${
                   task.done ? 'stroke' : ''
