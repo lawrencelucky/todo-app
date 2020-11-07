@@ -94,3 +94,57 @@
   color: #f44336;
   cursor: pointer;
 }
+
+@media screen and (max-width: 780px) {
+  .displayTask {
+    padding: 0 6rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .displayTask {
+    padding: 0 3rem;
+  }
+
+  .displayTask__header {
+    width: 45rem;
+  }
+
+  .displayTask__task {
+    width: 45rem;
+  }
+
+  .displayTask__task--text {
+    width: 20rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .displayTask__header {
+    width: 35rem;
+  }
+
+  .displayTask__task {
+    width: 35rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .displayTask {
+    padding: 1rem;
+  }
+
+  .displayTask__header {
+    width: 30rem;
+    font-size: 1.6rem;
+  }
+
+  .displayTask__task {
+    width: 30rem;
+  }
+
+  .displayTask__task--text {
+    font-size: 1.6rem;
+    width: 18rem;
+  }
+}

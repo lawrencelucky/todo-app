@@ -52,3 +52,38 @@
   color: #fffff0;
   transition: all 0.5s;
 }
+
+@media screen and (max-width: 780px) {
+  .formInput {
+    padding: 0 6rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .formInput {
+    padding: 0 3rem;
+  }
+  .formInput__input {
+    width: 41rem;
+  }
+
+  .formInput .MuiSvgIcon-root {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .formInput {
+    padding: 1rem;
+  }
+
+  .formInput__input {
+    width: 25rem;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+  }
+
+  .formInput .MuiSvgIcon-root {
+    font-size: 2.5rem;
+  }
+}
