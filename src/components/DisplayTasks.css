@@ -60,7 +60,6 @@
 
 .displayTask__task--text.stroke {
   text-decoration: line-through #85ef47;
-  text-decoration-thickness: 2rem;
 }
 
 .displayTask__task--label input:checked + .displayTask__task--text::before {
